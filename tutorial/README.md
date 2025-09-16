@@ -687,8 +687,8 @@ Commands used:
 
 2. csvcut and save command: csvcut -c 'Requester::Organization Name' data/ice-foia-logs/2024-10_FOIA_Log.csv > data/ice-foia-logs/2024_lawyer_requests.csv
 
-3. Bonus - unique names command: 
+3. Bonus - unique names command: csvsort -c "Requester::Organization Name" data/ice-foia-logs/2024_lawyer_requests.csv | uniq | wc -l
 
 Results:
-- Total requests from legal organizations: 
-- Number of unique legal organization names: 
+- Total requests from legal organizations: 4633
+- Number of unique legal organization names: 707
