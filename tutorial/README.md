@@ -240,10 +240,13 @@ Using `ls` or a combination of `cd` and `ls`, explore the ICE detention statisti
 **Write your answers here:**
 
 1. Most recent fiscal year: 
+Ans: FY 25.
 
-2. Number of FY25 files: 
+2. Number of FY25 files:
+There are two files for FY 25. 
 
-3. What the numbers represent: 
+3. What the numbers represent:
+I think they represent the statistics for Feb 14, 2025 and Feb 27, 2025. 
 
 (Check your answers against the solutions file when complete)
 
@@ -349,13 +352,13 @@ Typing the minimal number of characters, delete the file `data/manual/mock_data/
 
 **Write your answer here:**
 
-Method used (arrow keys or ctrl+r): 
+Method used (arrow keys or ctrl+r): Arrow keys
 
 Commands used: 
 
-1. 
+1. rm data/manual/mock_data/mock_data_1.txt (changed 'touch' to 'rm' after scrolling up with the arrow key.)
 
-2. 
+2. rmdir data/manual/mock_data (changed mkdir to rmdir after scrolling up with the arrow key.)
 
 ## Viewing and previewing files
 
@@ -425,11 +428,11 @@ Use the commands you've learned to examine the UMPD Incidents CSV file and answe
 
 **Write your answers here:**
 
-1. First incident type on 2/1/2025: 
+1. First incident type on 2/1/2025: Injured/sick person
 
-2. Total rows (excluding header): 
+2. Total rows (excluding header): 18352
 
-3. Most recent date in file: 
+3. Most recent date in file: 2020-12-30 (This is the most recent date I found in the lat 10 entries shown after usiing 'tail'. Don't know of this is accurate considering that there are entries from 2025 in this csv)
 
 ## Searching for files and their contents
 
@@ -489,13 +492,13 @@ Explore the FOIA logs and answer these questions:
 
 **Write your answers here:**
 
-1. Command to find 2024 CSV FOIA logs: 
+1. Command to find 2024 CSV FOIA logs: find data -iname '*2024*foia*.csv'
 
-2. Number of 2024 CSV files: 
+2. Number of 2024 CSV files: 3
 
-3. Your search term: 
+3. Your search term: $ tail -n 4 data/ice-foia-logs/2024-10_FOIA_Log.csv
 
-   What you found: 
+   What you found: the last four entries in the foia log
 
 **Bonus answer:**
 
@@ -535,9 +538,9 @@ Use a different pattern to search the FOIA log CSV files for something of intere
 
 **Write your answer here:**
 
-Search term used: 
+Search term used: grep -ilr 'threat' data (to find files with the word 'threat')
 
-What you found: 
+What you found: Three links to csvs that I assume have "threat" in them.
 
 ### Try it yourself
 
@@ -545,7 +548,7 @@ Now let's practice with csvkit tools. Work through these exercises and record yo
 
 1. Use `csvgrep` to find requests that match "Law" in the `Requester::Organization Name` column of `data/ice-foia-logs/2024-10_FOIA_Log.csv`.
 2. Use `csvcut` to display only that column and save this to `data/ice-foia-logs/2024_lawyer_requests.csv`.
-3. **Analysis questions**: 
+3. **Analysis questions**:
    - How many total lawyer/law firm requests were there?
    - Can you identify any patterns in the organization names?
    - Which appears more frequently: "Law" or "Legal" in the organization names?
@@ -554,7 +557,7 @@ Now let's practice with csvkit tools. Work through these exercises and record yo
 
 **Write your answers here:**
 
-1. Command used for csvgrep: 
+1. Command used for csvgrep:
 
 2. Command used to save with csvcut: 
 
@@ -680,9 +683,9 @@ Bonus points: Use `uniq` and `csvsort` to get only unique lawyer/law firm names.
 
 Commands used:
 
-1. csvgrep command: 
+1. csvgrep command: csvgrep -c 'Requester::Organization Name' -i -m 'law' data/ice-foia-logs/2024-10_FOIA_Log.csv
 
-2. csvcut and save command: 
+2. csvcut and save command: csvcut -c 'Requester::Organization Name' data/ice-foia-logs/2024-10_FOIA_Log.csv > data/ice-foia-logs/2024_lawyer_requests.csv
 
 3. Bonus - unique names command: 
 
