@@ -91,3 +91,17 @@ Link: [National Population Totals: 2020-2024](https://www.census.gov/data/tables
 Agency: UMPD
 
 Link: [UMPD Incident Logs](https://umpd.umd.edu/statistics-reports/daily-crime-and-incident-logs)
+
+ - How could command line skills improve your efficiency as a journalist?
+   By helping journalist sift through large documents and find informstion in limited time through the cat, grep and other commands, command line skills can reduce the amount of time journalists spend on preliminary activities like searching up information.
+
+   - What types of stories or investigations would benefit most from these tools?
+   These tools will be more beneficial to data and investigative stories.
+   
+   - What felt most challenging about learning these technical skills?
+   The most challenging part of learning these skills were:
+      Navigating the space with mostly unresponsive arrow keys and other short cuts such as Ctrl Z 
+      Knowing when and where to use some of the functions. The most confusing to me was the grep and csvgrep. Got further complicated when we had to use 'find' and other such functions. Generally, searching for content was the mnost challenging part for me.
+
+   - How does this connect to your understanding of data journalism?
+   Command line skills help to turn big data into smaller, relatable pieces of information, which is one of the important aspects of data journalism. 

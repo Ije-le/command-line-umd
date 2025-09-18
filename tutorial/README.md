@@ -502,7 +502,7 @@ Explore the FOIA logs and answer these questions:
 
 **Bonus answer:**
 
-Month with most requests: 
+Month with most requests: September
 
 ### Try it together
 
